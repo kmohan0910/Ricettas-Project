@@ -1,0 +1,8 @@
+.loading, .error {
+    text-align: center;
+    margin: 40px auto;
+  }
+  .home{
+      max-width: 1200px;
+      margin : 6px auto;
+  }
