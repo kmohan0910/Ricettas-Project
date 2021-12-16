@@ -56,6 +56,13 @@
       "method": "red wine",
       "cookingTime": "23 minutes",
       "id": "sM9eSH4"
+    },
+    {
+      "title": "few",
+      "ingredients": [],
+      "method": "fwe",
+      "cookingTime": "12 minutes",
+      "id": "leHCLF6"
     }
   ]
 }
