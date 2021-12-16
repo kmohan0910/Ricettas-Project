@@ -1,7 +1,7 @@
 //css
 import './App.css'
 
-import {BrowserRouter as Router , Route,Routes, Link} from "react-router-dom"
+import {BrowserRouter as Router , Route,Routes} from "react-router-dom"
 
 
 //pages
@@ -10,12 +10,14 @@ import Create from './Pages/create/Create';
 import Recipie from './Pages/recipie/Recipie';
 import Search from './Pages/search/search'
 import Navbar from './components/Navbar';
+import ThemeSelector from './components/ThemeSelector';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar/>
+        <ThemeSelector/>
          <Routes>
         <Route exact path ="/" element={<Home/>}/> 
         <Route exact path ="/Create" element={<Create/>}/> 

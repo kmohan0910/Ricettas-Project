@@ -17,7 +17,7 @@
     position: relative;
 }
 .recipe-list .card:hover{
-    background: #999;
+    background: rgb(250, 249, 249);
     transform: rotate(4deg);
 }
 .recipe-list .card h3{
@@ -36,10 +36,10 @@
     line-height: 1.5em;
 }
 .recipe-list .card a{
-    color: #555;
+    color: #fff;
     text-decoration: none;
     display: block;
-    background: #e2e2e2;
+    background: #4319bd;
     font-size: 0.9em;
     width: 100px;
     text-align: center;
