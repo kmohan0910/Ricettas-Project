@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom"
 import { useTheme } from "../hooks/useTheme"
+import TrashCan from '../assets/trashcan.svg'
 import "./Recipe.css"
+import { projectFirestore } from "../firebase/config"
 export default function Recipe({recipes}) {
+
+    const handleClick=(id)=>{
+        projectFirestore.collection('recipes').doc(id).delete()
+    }
     const { mode } = useTheme()
 
     if (recipes.length === 0) {
@@ -16,6 +22,7 @@ export default function Recipe({recipes}) {
             <p>{recipe.cookingTime} to make.</p>
             <div>{recipe.method.substring(0, 100)}...</div>
             <Link to={`/recipie/${recipe.id}`}>Cook This</Link>
+            <img className="delete" onClick={()=>handleClick(recipe.id) } src={TrashCan}/>
           </div>
         ))}
       </div>
