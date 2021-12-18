@@ -4,6 +4,7 @@ import TrashCan from '../assets/trashcan.svg'
 import "./Recipe.css"
 import { projectFirestore } from "../firebase/config"
 export default function Recipe({recipes}) {
+  const { color } = useTheme()
 
     const handleClick=(id)=>{
         projectFirestore.collection('recipes').doc(id).delete()
@@ -21,8 +22,8 @@ export default function Recipe({recipes}) {
             <h3>{recipe.title}</h3>
             <p>{recipe.cookingTime} to make.</p>
             <div>{recipe.method.substring(0, 100)}...</div>
-            <Link to={`/recipie/${recipe.id}`}>Cook This</Link>
-            <img className="delete" onClick={()=>handleClick(recipe.id) } src={TrashCan}/>
+            <Link to={`/recipie/${recipe.id}`} style={{ background: color }}>Cook This</Link>
+            <img key={recipe.id} alt="delete icon" className="delete" onClick={()=>handleClick(recipe.id) } src={TrashCan}/>
           </div>
         ))}
       </div>
