@@ -31,11 +31,11 @@ export default function Home() {
     })
 
     return ()=>unsub()
-  }, [data])
+  }, [])
   return (
     <div className="home">
       {error && <p className="error">{error}</p>}
-      {isPending && <p className="loading">Loading</p>}
+      {isPending && <p className="loading">Loading...</p>}
       {data && <Recipe recipes={data} />}
     </div>
   )
